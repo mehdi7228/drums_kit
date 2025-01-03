@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  font-family: 'Arvo', serif;
+  text-align: center;
+  background-image: url(images/drum-b-g.jpg);
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  color: #DBEDF3;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 4rem;
+  color: #EEEEEE;
+  font-family: "Playwrite CO Guides", cursive;
+  text-shadow: 3px 0 whitesmoke; 
+  margin-bottom: 80px;
+  padding-bottom: 80px;
+  letter-spacing: 3px; 
+}
+
+.drum {
+  outline: none;
+  border: 2px solid #404B69;
+  font-size: 4rem;
+  font-family: "Kanit", sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  color:#000000;
+  text-shadow: 3px 0 #DBEDF3; 
+  background-color: #DBEDF3;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 12px;
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); 
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.drum:active {
+  transform: scale(0.9);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.w {
+  background-image: url("images/tom01.png");
+  background-size: cover;
+}
+.a {
+  background-image: url("images/tom02.png");
+  background-size: cover;
+}
+.s {
+  background-image: url("images/tom03.png");
+  background-size: cover;
+}
+.d {
+  background-image: url("images/tom04.png");
+  background-size: cover;
+}
+.j {
+  background-image: url("images/snare02.png");
+  background-size: cover;
+}
+.k {
+  background-image: url("images/crash02.png");
+  background-size: cover;
+
+}
+.l {
+  background-image: url("images/kick.jpg");
+  background-size: cover;
+
+}
+
+.set {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; 
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 3rem;
+  }
+  .drum {
+    width: 120px;
+    height: 120px;
+    font-size: 2rem;
+  }
+}
+
+.pressed {
+  animation: pressedAnimation 0.1s ease-out;
+}
+
+@keyframes pressedAnimation {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
