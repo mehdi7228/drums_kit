@@ -3,8 +3,8 @@ body {
   font-family: 'Arvo', serif;
   text-align: center;
   background-image: url(images/drum-b-g.jpg);
-  background-size: cover; 
-  background-position: center; 
+  background-size: cover; /* کل صفحه را پوشش می‌دهد */
+  background-position: center;
   background-repeat: no-repeat;
   color: #DBEDF3;
   height: 100vh;
@@ -12,38 +12,40 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow: hidden; /* جلوگیری از اسکرول */
 }
 
 h1 {
   font-size: 4rem;
   color: #EEEEEE;
   font-family: "Playwrite CO Guides", cursive;
-  text-shadow: 3px 0 whitesmoke; 
-  margin-bottom: 80px;
-  padding-bottom: 80px;
-  letter-spacing: 3px; 
+  text-shadow: 3px 0 whitesmoke;
+  margin-bottom: 50px;
+  letter-spacing: 3px;
 }
 
 .drum {
   outline: none;
   border: 2px solid #404B69;
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: "Kanit", sans-serif;
   font-weight: bold;
   font-style: italic;
-  color:#000000;
-  text-shadow: 3px 0 #DBEDF3; 
+  color: #000000;
+  text-shadow: 3px 0 #DBEDF3;
   background-color: #DBEDF3;
-  margin: 15px;
-  padding: 20px;
+  margin: 10px;
+  padding: 15px;
   border-radius: 12px;
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   display: inline-block;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); 
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
   text-align: center;
   cursor: pointer;
   transition: all 0.2s ease;
+  background-size: cover; /* تصاویر در دکمه‌ها */
+  background-position: center; /* مرکز تصاویر */
 }
 
 .drum:active {
@@ -74,12 +76,10 @@ h1 {
 .k {
   background-image: url("images/crash02.png");
   background-size: cover;
-
 }
 .l {
   background-image: url("images/kick.jpg");
   background-size: cover;
-
 }
 
 .set {
@@ -87,17 +87,47 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 20px; 
+  gap: 10px;
+  padding: 10px; /* فاصله از کناره‌ها */
+  max-width: 100%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  body {
+    padding: 0 10px;
+    font-size: 14px;
+    height: 100vh;
+  }
+
   h1 {
     font-size: 3rem;
+    margin-bottom: 30px;
   }
+
   .drum {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     font-size: 2rem;
+  }
+
+  .set {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .drum {
+    width: 80px;
+    height: 80px;
+    font-size: 1.5rem;
+  }
+
+  .set {
+    gap: 5px;
   }
 }
 
